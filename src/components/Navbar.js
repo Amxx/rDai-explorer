@@ -60,14 +60,14 @@ class Navbar extends React.Component
 				<MDBNavbarBrand>
 					<img src={rDaiLogo} alt='logo' className='navLogo'/>
 					<strong className='white-text'>
-					rDai explorer
+					{this.props.network} explorer
 					</strong>
 				</MDBNavbarBrand>
 				<MDBNavbarToggler onClick={this.toggleCollapse.bind(this)} />
 				<MDBCollapse id='navbarCollapse' isOpen={this.state.isOpen} navbar>
 					<MDBNavbarNav left>
 						<MDBNavItem>
-							<MDBNavLink link to={`/${this.props.network}/Overview`}>Overview</MDBNavLink>
+							<MDBNavLink link to={`/${this.props.network}/overview`}>Overview</MDBNavLink>
 						</MDBNavItem>
 						<MDBNavItem>
 							<MDBNavLink link to={`/${this.props.network}/about-us`}>About Us</MDBNavLink>
